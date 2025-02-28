@@ -12,15 +12,18 @@ export default {
         foreground: "var(--foreground)",
         lightGray: "var(--lightGray)",
         darkGray: "var(--darkGray)",
-        mintBreeze: "var(--mintBreeze)",
-        tropicalTeal: "var(--tropicalTeal)",
-        verdantWave: "var(--verdantWave)",
-        forestCanopy: "var(--forestCanopy)",
-        midnightLagoon: "var(--midnightLagoon)",
+        deepBlue: "var(--deepBlue)",
+        primary: "var(--primary)",
       },
       fontFamily: {
         code: ["SourceCodePro", "Montserrat", "Arial"],
       },
+      maxWidth: {
+        "8xl": "90rem",
+      },
+      width: {
+        "8xl": "90rem",
+      }
     },
   },
   plugins: [],
