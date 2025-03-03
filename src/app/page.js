@@ -1,14 +1,42 @@
+'use client'
+
 import nextConfig from "../../next.config.mjs";
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import Navbar from "./navbar";
+import Footer from "./footer";
+import ProjectSlideShow from "./projects_slideshow";
 
 export default function Home() {
+  const [navState, setNavState] = useState(1);
+  useEffect(() => {
+    const handleScroll = () => {
+      setNavState(window.scrollY > 50 ? 0 : 1);
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    handleScroll();
+  }, [])
+
   return (
     <>
-      <div>
-        <p className="text-tropicalTeal font-code bg-white">a</p>
-        <Link href="https://www.linkedin.com/in/royce-tan-2639a8277/" className="">LinkedIN</Link>
-        <img src={`${nextConfig.basePath}/images/PersonalPic.jpg`} className="w-24"/>
+      <Navbar pageIndex={0} navState={navState} />
+      <div className="relative w-full h-screen">
+        <div className="absolute size-full opacity-80 -z-20"> 
+          <ProjectSlideShow/>
+        </div>
+        <div className="bg-foreground w-1/2 h-full pl-5 sm:pl-9 z-10">
+          <div className="ml-auto max-w-[40rem] size-full content-center space-y-4 text-background">
+            <p className="">Hi, I'm</p>
+            <p className="pt-10 text-5xl">Royce Tan</p>
+            <p className="">Game Developer/Front-end Developer</p>
+          </div>
+        </div>
       </div>
+      <div className="">
+
+      </div>
+      <Footer />
     </>
   );
 }
