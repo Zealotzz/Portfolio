@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import nextConfig from "../../next.config.mjs";
 import Logo from "./logo";
 
 export default function Navbar({ pageIndex = 0, navState = 0 }) {

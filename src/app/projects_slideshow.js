@@ -9,7 +9,6 @@ export default function ProjectSlideShow() {
     `${path}/projects/Bullet.Hell/b.h2.jpg`,
     `${path}/projects/Bullet.Hell/b.h1.jpg`,
   ];
-  console.log(process.env.BASE_PATH);
 
   let currIndex = 0;
   const [index, setIndex] = useState(currIndex);

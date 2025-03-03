@@ -1,6 +1,5 @@
 'use client'
 
-import nextConfig from "../../next.config.mjs";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Navbar from "./navbar";
