@@ -1,5 +1,3 @@
-'use client'
-
 export default function Logo({ size, logoColor="black" }) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" style={{color: logoColor, width: size, height: size}}>

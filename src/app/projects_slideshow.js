@@ -1,15 +1,15 @@
 'use client'
 
 import { useState, useEffect, useRef } from "react";
-import nextConfig from "../../next.config.mjs";
 
 export default function ProjectSlideShow() {
-  const path = `${nextConfig.basePath}/images`;
+  const path = `${process.env.BASE_PATH}/images`;
   const images = [
     `${path}/projects/Bullet.Hell/b.h3.jpg`,
     `${path}/projects/Bullet.Hell/b.h2.jpg`,
     `${path}/projects/Bullet.Hell/b.h1.jpg`,
   ];
+  console.log(process.env.BASE_PATH);
 
   let currIndex = 0;
   const [index, setIndex] = useState(currIndex);
