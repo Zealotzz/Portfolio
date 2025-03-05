@@ -21,7 +21,7 @@ export default function Home() {
     <>
       <Navbar pageIndex={0} navState={navState} />
       <div className="relative w-full h-screen">
-        <div className="absolute size-full opacity-80 -z-20"> 
+        <div className="absolute size-full opacity-80 -z-20">
           <ProjectSlideShow/>
         </div>
         <div className="bg-foreground w-1/2 h-full pl-5 sm:pl-9 z-10">

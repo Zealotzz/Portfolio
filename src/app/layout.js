@@ -3,6 +3,9 @@ import "./globals.css";
 export const metadata = {
   title: "Royce's Portfolio",
   description: "My Portofolio",
+  openGraph: {
+    images: '/Logo.png'
+  }
 };
 
 export default function RootLayout({ children }) {
