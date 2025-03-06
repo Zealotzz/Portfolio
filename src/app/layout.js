@@ -3,6 +3,7 @@ import "./globals.css";
 export const metadata = {
   title: "Royce's Portfolio",
   description: "My Portofolio",
+  metadataBase: process.env.NODE_ENV === "production" ? new URL('https://zealotzz.github.io/Portfolio') : new URL("https://localhost:3000"),
   openGraph: {
     images: '/Logo.png'
   }
