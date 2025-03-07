@@ -13,6 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <meta http-equiv="Cache-control" content="no-cache"/>
         <style>
           {`
             @font-face {
