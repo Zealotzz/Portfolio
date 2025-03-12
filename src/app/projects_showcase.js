@@ -30,7 +30,7 @@ export default function ProjectsShowcase() {
         })}
       </div>
       <div className="my-4 justify-self-center">
-        <PageDot n={projects.length} current={currentProjectIndex} gap={3}/>
+        <PageDot n={projects.length} current={currentProjectIndex} gap={3} onClickFunc={setCurrentProjectIndex}/>
       </div>
     </>
   );
