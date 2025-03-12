@@ -7,7 +7,6 @@ import Footer from "./footer";
 import SlideShow from "./slideshow";
 import Tab from "./icon_tab";
 import ProjectsShowcase from "./projects_showcase";
-import PageDot from "./page_dot";
 
 export default function Home() {
   const [navState, setNavState] = useState(1);
