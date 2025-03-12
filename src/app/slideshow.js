@@ -2,14 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 
-export default function ProjectSlideShow() {
-  const path = `${process.env.BASE_PATH}/images`;
-  const images = [
-    `${path}/projects/Bullet.Hell/b.h3.jpg`,
-    `${path}/projects/Bullet.Hell/b.h2.jpg`,
-    `${path}/projects/Bullet.Hell/b.h1.jpg`,
-  ];
-
+export default function SlideShow({ images }) {
   let currIndex = 0;
   const [index, setIndex] = useState(currIndex);
 

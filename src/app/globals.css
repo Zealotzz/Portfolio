@@ -4,17 +4,17 @@
 
 
 :root {
-  --background: #ffffff;
+  --background: #dfdfdf;
   --foreground: #171717;
   --lightGray: #C7C7C7;
-  --darkGray: #434343;
-  --deepBlue: #075fe4;
+  --darkGray: #535353;
+  --deepBlue: #022a65;
   --primary: #171717;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #272727;
     --foreground: #dfdfdf;
     --primary: #e3e3e3;
   }
@@ -24,6 +24,15 @@ body {
   color: var(--primary);
   background: var(--background);
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;      /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;  /* Safari and Chrome */
 }
 
 @layer utilities {
