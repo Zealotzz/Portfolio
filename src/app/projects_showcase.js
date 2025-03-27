@@ -10,7 +10,7 @@ export default function ProjectsShowcase() {
 
   return (
     <>
-      <div className="flex snap-x snap-mandatory w-full h-[25vw] overflow-x-auto">
+      <div className="flex snap-x snap-mandatory w-full min-h-[300px] h-[25vw] overflow-x-auto">
         {projects.map((p, id)=>{
           return(
             <div 
