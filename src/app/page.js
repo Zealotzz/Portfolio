@@ -34,11 +34,16 @@ export default function Home() {
         <div className="absolute size-full -z-20">
           <SlideShow images={homeImages} />
         </div>
-        <div className="bg-gradient-to-bl from-lightGray to-70% to-deepBlue w-1/2 h-full pl-5 sm:pl-9 z-10">
-          <div className="ml-auto max-w-[40rem] size-full content-center space-y-4 text">
+        <div className="absolute w-full h-screen bg-black -z-10 opacity-40"></div>
+        <div className="lg:bg-gradient-to-bl from-lightGray to-70% to-background w-full lg:w-1/3 h-full pl-5 sm:pl-9 z-10">
+          <div className="lg:ml-auto lg:max-w-[40rem] size-full content-center space-y-4 font-code justify-items-center lg:justify-items-start">
             <p className="">Hi, I'm</p>
             <p className="pt-5 text-5xl">Royce Tan</p>
-            <p className="">Game Developer / Front-end Developer</p>
+            <ul className="ml-5">
+              <li>Game Developer</li>
+              <li>Front-end Web Developer</li>
+              <li>Coffee Enjoyer</li>
+            </ul>
           </div>
         </div>
       </div>

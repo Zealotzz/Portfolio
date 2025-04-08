@@ -5,8 +5,8 @@ export default function Tab({ imgSrc, text }) {
 
   return (
     <>
-      <div className="">
-        <img src={imgSrc} loading="lazy"/>
+      <div className="select-none">
+        <img src={imgSrc} draggable="false" loading="lazy"/>
         <p className="mt-4 text-center">{text}</p>
       </div>
     </>

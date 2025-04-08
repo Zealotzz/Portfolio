@@ -25,7 +25,7 @@ export default function SlideShow({ images }) {
           return (
             <img
               key={i}
-              className={`slideshow-image absolute size-full ${index == i ? "opacity-100" : "opacity-0"} transition-opacity duration-1000`}
+              className={`slideshow-image absolute size-full ${index == i ? "opacity-100" : "opacity-0"} transition-opacity duration-1000 object-cover`}
               src={img}
               alt={`images ${i}`}
             />

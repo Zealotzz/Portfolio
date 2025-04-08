@@ -35,6 +35,10 @@ body {
   display: none;  /* Safari and Chrome */
 }
 
+ul {
+  list-style-type: disc; /* or another style like circle, square, etc. */
+}
+
 @layer utilities {
 
 }

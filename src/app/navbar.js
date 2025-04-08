@@ -5,6 +5,7 @@ import Link from "next/link";
 import Logo from "./logo";
 
 export default function Navbar({ pageIndex = 0, navState = 0 }) {
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const navbar = document.querySelector("#navbar");
@@ -23,18 +24,36 @@ export default function Navbar({ pageIndex = 0, navState = 0 }) {
 
   return (
     <>
-      <div id="navbar" className="fixed top-0 w-full border-b-2 border-foreground bg-background px-5 sm:px-9 py-4 opacity-0 transition-opacity duration-200 z-50">
-        <div className="flex mx-auto max-w-7xl w-full justify-between">
-          <Link href="/">
-            <div className="flex items-center gap-3">
-              <Logo size={24} logoColor="foreground" />
-              <p className="text-lg">Royce's Portfolio</p>
+      <div id="navbar" className="fixed top-0 w-full border-b-2 border-foreground bg-background py-4 opacity-0 transition-opacity duration-200 z-50">
+        <div className="px-5 sm:px-9">
+          <div className="flex mx-auto max-w-7xl w-full justify-between">
+            <Link href="/">
+              <div className="flex items-center gap-3">
+                <Logo size={24} logoColor="foreground" />
+                <p className="text-lg">Royce's Portfolio</p>
+              </div>
+            </Link>
+            <div className="hidden lg:flex items-center gap-6">
+              <Link href="/" className={`text-lg ${pageIndex == 0 ? "underline" : ""}`}>About</Link>
+              <Link href="/projects" className={`text-lg ${pageIndex == 1 ? "underline" : ""}`}>Projects</Link>
+              <p className={`text-lg ${pageIndex == 2 ? "underline" : ""}`}>Certificates</p>
             </div>
-          </Link>
-          <div className="hidden lg:flex items-center gap-6">
-            <Link href="/" className={`text-lg ${pageIndex == 0 ? "underline" : ""}`}>About</Link>
-            <Link href="/projects" className={`text-lg ${pageIndex == 1 ? "underline" : ""}`}>Projects</Link>
-            <p className={`text-lg ${pageIndex == 2 ? "underline" : ""}`}>Certificates</p>
+            <div
+              className="lg:hidden flex flex-col justify-between size-7 cursor-pointer"
+              onClick={() => {
+                setIsOpen(!isOpen);
+              }}
+            >
+              <div className="bg-foreground w-full h-1/5 rounded-full" />
+              <div className="bg-foreground w-full h-1/5 rounded-full" />
+              <div className="bg-foreground w-full h-1/5 rounded-full" />
+            </div>
+          </div>
+        </div>
+
+        <div className={`${isOpen ? "border-t-2" : "max-h-"} border-foreground transition-all duration-500`}>
+          <div>
+            
           </div>
         </div>
       </div>
